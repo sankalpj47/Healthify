@@ -2,9 +2,10 @@ from django.db import models
 
 
 class User(models.Model):
-    # Django automatically adds: id = models.AutoField(primary_key=True)
+   # id field is created automatically by Django as primary key
 
     name = models.CharField(max_length=100)
+    
     phone_number = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     hashed_password = models.CharField(max_length=100)
